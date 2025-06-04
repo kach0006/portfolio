@@ -1,0 +1,343 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url(/assets/images/borgmesterchristiansensgade.jpg);
+}
+
+body {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0;
+  background-color: var(--smoke);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font: var(--p-font);
+  color: var(--raisin);
+}
+
+@font-face {
+  font-family: Staatliches;
+  src: url(../assets/fonts/Staatliches-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald-R;
+  src: url(../assets/fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald-M;
+  src: url(../assets/fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+  font-family: Oswald-L;
+  src: url(../assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+  font-family: Oswald-B;
+  src: url(../work-files/oswald/Oswald-Bold.ttf);
+}
+
+:root {
+  --turbo: #f7e904;
+  --raisin: #262626;
+  --smoke: #f2f2f2;
+
+  --btn-padding: 0.5rem 1rem;
+
+  --btn-hover: rgba(38, 38, 38, 0.5);
+
+  --header-font: 2rem Oswald-M;
+  --menu-font: 3rem Staatliches;
+  --p-font: 1.1rem Oswald-R;
+  --h1-font: 3rem Staatliches;
+  --h2-font: 1.5rem Oswald-R;
+  --h3-font: 1.5rem Oswald-R;
+  --btn-font: 1.5rem Oswald-R;
+  --statement-font: 2rem Oswald-M;
+  --infotag-font: 0.9rem Oswald-R;
+}
+
+/* Header inkl. sidebar */
+header {
+  padding: 1rem 2rem;
+  font: var(--header-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+}
+
+header img {
+  position: relative;
+  height: 40px;
+  width: auto;
+  z-index: 4;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.menu-text,
+.menu-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.menu-text {
+  font-size: 20px;
+  color: var(--turbo);
+}
+
+.menu-line {
+  width: 30px;
+  height: 4px;
+  background: black;
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 999px;
+}
+
+.menu-line_1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-line_2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+input:checked + .toggle-label .menu-text {
+  opacity: 0;
+}
+
+input:checked + .toggle-label .menu-line {
+  opacity: 1;
+}
+
+.sidebar {
+  font: var(--h1-font);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--turbo);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: var(--raisin);
+}
+
+.sidebar nav ul li {
+  padding-bottom: 1rem;
+}
+
+header input:checked ~ .sidebar {
+  transform: translateX(0%);
+}
+
+/* Header inkl. sidebar slut */
+
+.hero {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  max-width: 1100px;
+  background-image: url(/assets/images/koehlershave_dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--btn-padding);
+  background-color: transparent;
+  font: var(--btn-font);
+  color: var(--turbo);
+  text-transform: uppercase;
+  border: 1px solid var(--turbo);
+  border-radius: 5px;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btn img {
+  height: auto;
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.container,
+.container_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.container_2 img {
+  width: 100%;
+  max-width: 695px;
+}
+
+.statement {
+  font: var(--statement-font);
+  color: var(--raisin);
+}
+
+.divider {
+  background-color: #262626;
+  height: 1px;
+  width: auto;
+  margin: 0 2rem;
+}
+
+.infotags {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font: var(--infotag-font);
+  text-transform: uppercase;
+  color: var(--raisin);
+  margin: 0 2rem;
+}
+
+.infotag {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.1rem 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.btn a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: transparent;
+  font: var(--btn-font);
+  color: var(--raisin);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  border: 1px solid var(--raisin);
+}
+
+.btn img,
+.to-top img {
+  height: 1.5rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.to-top,
+.copyright,
+.footer-logo {
+  display: flex;
+  margin: 1rem 2rem 0;
+  gap: 1rem;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.to-top {
+  justify-content: flex-end;
+}
+
+.footer-logo {
+  justify-content: center;
+  padding: 0 0 1rem;
+}
+
+.footer-logo img {
+  height: 5rem;
+}
+
+.copyright {
+  justify-content: flex-start;
+}
+
+@media (width >= 499px) {
+  html {
+    color: red;
+  }
+  .hero {
+    min-height: 450px;
+  }
+  .container {
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
+
+  .container_2 {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .statement {
+    max-width: 390px;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .desc-btn {
+  }
+}
