@@ -67,10 +67,12 @@ p {
   --p-font: 1.1rem Oswald-R;
   --h1-font: 3rem Staatliches;
   --h2-font: 1.5rem Oswald-R;
-  --h3-font: 1.5rem Oswald-R;
+  --h3-font: 1.25rem Oswald-R;
   --btn-font: 1.5rem Oswald-R;
   --statement-font: 2rem Oswald-M;
-  --infotag-font: 0.9rem Oswald-R;
+  --infotag-font: 0.8rem Oswald-M;
+  --topictag-font: 0.8rem Oswald-R;
+  --bc-font: 1.5rem Oswald-B;
 }
 
 /* Header inkl. sidebar */
@@ -119,7 +121,7 @@ input[type="checkbox"] {
 .menu-line {
   width: 30px;
   height: 4px;
-  background: black;
+  background: var(--raisin);
   transform-origin: center;
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.3s ease;
@@ -216,6 +218,21 @@ header input:checked ~ .sidebar {
   width: auto;
 }
 
+.breadcrumbs {
+  display: inline-flex;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  gap: 1rem;
+  color: var(--turbo);
+  font: var(--p-font);
+}
+
+.crumb {
+  color: var(--turbo);
+  text-transform: uppercase;
+}
+
 .container,
 .container_2 {
   display: flex;
@@ -226,7 +243,6 @@ header input:checked ~ .sidebar {
 
 .container_2 img {
   width: 100%;
-  max-width: 695px;
 }
 
 .statement {
@@ -235,15 +251,23 @@ header input:checked ~ .sidebar {
 }
 
 .divider {
-  background-color: #262626;
+  background-color: var(--raisin);
   height: 1px;
   width: auto;
   margin: 0 2rem;
 }
 
+.divider_2 {
+  background-color: var(--raisin);
+  height: 1px;
+  width: auto;
+  margin: 1rem 0 0;
+}
+
 .infotags {
   display: inline-flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 0.5rem;
   font: var(--infotag-font);
   text-transform: uppercase;
@@ -251,8 +275,12 @@ header input:checked ~ .sidebar {
   margin: 0 2rem;
 }
 
+.infotags_2 {
+  margin: 0.5rem 0;
+}
+
 .infotag {
-  border: 1px solid black;
+  border: 1px solid var(--raisin);
   border-radius: 5px;
   padding: 0.1rem 0.5rem;
   margin-bottom: 0.15rem;
@@ -273,10 +301,13 @@ header input:checked ~ .sidebar {
   color: var(--raisin);
   text-transform: uppercase;
   text-decoration: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .btn a:hover {
-  border: 1px solid var(--raisin);
+  border-top: 1px solid var(--raisin);
+  border-bottom: 1px solid var(--raisin);
 }
 
 .btn img,
@@ -313,7 +344,20 @@ header input:checked ~ .sidebar {
   justify-content: flex-start;
 }
 
-@media (width >= 499px) {
+figcaption {
+  font: var(--infotag-font);
+  color: var(--raisin);
+}
+
+.figure {
+  margin: 2rem 0;
+}
+
+.linkedin-btn {
+  margin-top: 3rem;
+}
+
+@media (min-width: 499px) {
   html {
     color: red;
   }
@@ -338,6 +382,26 @@ header input:checked ~ .sidebar {
     display: flex;
   }
 
-  .desc-btn {
+  .divider_2 {
+    display: none;
+  }
+
+  .btn-dim {
+    width: 322px;
+  }
+
+  .btn-dim a {
+    margin-top: 0;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 499px) and (max-width: 950px) {
+  .btn-dim {
+    width: 285px;
   }
 }
