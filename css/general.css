@@ -234,7 +234,8 @@ header input:checked ~ .sidebar {
 }
 
 .container,
-.container_2 {
+.container_2,
+.container_portfolio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -250,7 +251,8 @@ header input:checked ~ .sidebar {
   color: var(--raisin);
 }
 
-.divider {
+.divider,
+.divider_3 {
   background-color: var(--raisin);
   height: 1px;
   width: auto;
@@ -357,6 +359,11 @@ figcaption {
   margin-top: 3rem;
 }
 
+.container_2 .infotags,
+.container_portfolio .infotags {
+  margin: 1rem 0 1rem 0;
+}
+
 @media (min-width: 499px) {
   html {
     color: red;
@@ -397,6 +404,12 @@ figcaption {
   .content {
     width: 100%;
     max-width: 500px;
+  }
+
+  .portfolio-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
 
