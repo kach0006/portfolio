@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Staatliches;
+  src: url(../assets/fonts/Staatliches-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald-R;
+  src: url(../assets/fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald-M;
+  src: url(../assets/fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+  font-family: Oswald-L;
+  src: url(../assets/fonts/Oswald-Light.ttf);
+}
+
+@font-face {
+  font-family: Oswald-B;
+  src: url(../work-files/oswald/Oswald-Bold.ttf);
+}
+
+:root {
+  --turbo: #f7e904;
+  --raisin: #262626;
+  --smoke: #f2f2f2;
+  --turbo-fade: rgba(247, 233, 4, 0.5);
+
+  --btn-padding: 0.5rem 1rem;
+
+  --btn-hover: rgba(38, 38, 38, 0.5);
+
+  --header-font: 2rem Oswald-M;
+  --menu-font: 3rem Staatliches;
+  --p-font: 1.1rem Oswald-R;
+  --h1-font: 3rem Staatliches;
+  --h2-font: 1.5rem Oswald-R;
+  --h3-font: 1.25rem Oswald-R;
+  --btn-font: 1.5rem Oswald-R;
+  --statement-font: 2rem Oswald-M;
+  --infotag-font: 0.8rem Oswald-M;
+  --topictag-font: 0.8rem Oswald-R;
+  --bc-font: 1.5rem Oswald-B;
+}

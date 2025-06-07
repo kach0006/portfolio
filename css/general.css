@@ -5,7 +5,7 @@
 }
 
 html {
-  background-image: url(../assets/images/borgmesterchristiansensgade.jpg);
+  background-image: url(../assets/images/borgmesterchristiansensgade_2.jpg);
 }
 
 body {
@@ -28,55 +28,7 @@ p {
   color: var(--raisin);
 }
 
-@font-face {
-  font-family: Staatliches;
-  src: url(../assets/fonts/Staatliches-Regular.ttf);
-}
-
-@font-face {
-  font-family: Oswald-R;
-  src: url(../assets/fonts/Oswald-Regular.ttf);
-}
-
-@font-face {
-  font-family: Oswald-M;
-  src: url(../assets/fonts/Oswald-Medium.ttf);
-}
-
-@font-face {
-  font-family: Oswald-L;
-  src: url(../assets/fonts/Oswald-Light.ttf);
-}
-
-@font-face {
-  font-family: Oswald-B;
-  src: url(../work-files/oswald/Oswald-Bold.ttf);
-}
-
-:root {
-  --turbo: #f7e904;
-  --raisin: #262626;
-  --smoke: #f2f2f2;
-  --turbo-fade: rgba(247, 233, 4, 0.5);
-
-  --btn-padding: 0.5rem 1rem;
-
-  --btn-hover: rgba(38, 38, 38, 0.5);
-
-  --header-font: 2rem Oswald-M;
-  --menu-font: 3rem Staatliches;
-  --p-font: 1.1rem Oswald-R;
-  --h1-font: 3rem Staatliches;
-  --h2-font: 1.5rem Oswald-R;
-  --h3-font: 1.25rem Oswald-R;
-  --btn-font: 1.5rem Oswald-R;
-  --statement-font: 2rem Oswald-M;
-  --infotag-font: 0.8rem Oswald-M;
-  --topictag-font: 0.8rem Oswald-R;
-  --bc-font: 1.5rem Oswald-B;
-}
-
-/* Header inkl. sidebar */
+/* Start: Header inkl. sidebar */
 header {
   padding: 1rem 2rem;
   font: var(--header-font);
@@ -173,15 +125,19 @@ input:checked + .toggle-label .menu-line {
   color: var(--raisin);
 }
 
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
 .sidebar nav ul li {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 header input:checked ~ .sidebar {
   transform: translateX(0%);
 }
 
-/* Header inkl. sidebar slut */
+/* Slut: Header inkl. sidebar */
 
 .hero {
   position: relative;
@@ -344,6 +300,7 @@ header input:checked ~ .sidebar {
 
 .copyright {
   justify-content: flex-start;
+  padding-bottom: 2rem;
 }
 
 figcaption {
@@ -432,9 +389,6 @@ figure img {
 }
 
 @media (min-width: 499px) {
-  html {
-    color: red;
-  }
   .hero {
     min-height: 450px;
   }
@@ -456,6 +410,10 @@ figure img {
   .pf-img {
     border-top: 1px solid var(--raisin);
     border-bottom: 1px solid var(--raisin);
+  }
+
+  .slim-left {
+    margin-left: 4rem;
   }
   /* Start: Tema 5-specifikke placeringer*/
 
@@ -502,6 +460,10 @@ figure img {
   .kivilai_1 {
     padding: 0;
   }
+
+  #portrait_3 {
+    max-width: 500px;
+  }
   /* Slut: Tema 5-specifikke placeringer*/
 
   .add-space {
@@ -523,7 +485,7 @@ figure img {
   }
 
   .statement {
-    max-width: 390px;
+    max-width: 450px;
   }
 
   .desktop-only {
