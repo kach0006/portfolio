@@ -57,6 +57,7 @@ p {
   --turbo: #f7e904;
   --raisin: #262626;
   --smoke: #f2f2f2;
+  --turbo-fade: rgba(247, 233, 4, 0.5);
 
   --btn-padding: 0.5rem 1rem;
 
@@ -349,7 +350,7 @@ figcaption {
   font: var(--infotag-font);
   color: var(--raisin);
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.5rem;
 }
 
 figure {
@@ -412,6 +413,15 @@ figure img {
   padding: 2rem 0 1rem;
 }
 
+.theme_3 .emnesite_1 {
+  margin: auto;
+  padding: 2rem 0 1rem;
+}
+
+.pf-img {
+  margin-bottom: 1rem;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -432,13 +442,21 @@ figure img {
   .container_theme {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3.5rem;
   }
 
   .theme_4 .emergency_1 {
     padding-top: 0;
   }
 
+  .theme_3 .emnesite_1 {
+    padding-top: 0;
+  }
+
+  .pf-img {
+    border-top: 1px solid var(--raisin);
+    border-bottom: 1px solid var(--raisin);
+  }
   /* Start: Tema 5-specifikke placeringer*/
 
   .fig-span_5_1 {
@@ -448,7 +466,9 @@ figure img {
   }
 
   .theme_5 figure:nth-of-type(1),
-  .theme_4 figure:nth-of-type(2) {
+  .theme_4 figure:nth-of-type(2),
+  .theme_3 figure:nth-of-type(2),
+  .theme_2 figure:nth-of-type(2) {
     grid-column: 1;
   }
 
@@ -458,19 +478,25 @@ figure img {
   }
 
   .theme_5 p:nth-of-type(2),
-  .theme_4 p:nth-of-type(2) {
+  .theme_4 p:nth-of-type(2),
+  .theme_3 p:nth-of-type(2),
+  .theme_2 p:nth-of-type(2) {
     grid-column: 2;
     grid-row: 3;
   }
 
   .theme_5 p:nth-of-type(4),
-  .theme_4 p:nth-of-type(4) {
+  .theme_4 p:nth-of-type(4),
+  .theme_3 p:nth-of-type(4),
+  .theme_2 p:nth-of-type(4) {
     grid-column: 1;
     grid-row: 5;
   }
 
   .theme_5 img,
-  .theme_4 img {
+  .theme_4 img,
+  .theme_4 img,
+  .theme_2 img {
     margin-top: 0;
   }
   .kivilai_1 {
@@ -480,6 +506,10 @@ figure img {
 
   .add-space {
     margin-top: 0;
+  }
+
+  .add-space-desktop {
+    margin-top: 1rem;
   }
 
   .container {
@@ -505,10 +535,11 @@ figure img {
   }
 
   .btn-dim {
-    width: 322px;
+    width: 400px;
   }
 
   .btn-dim a {
+    max-width: 100%;
     margin-top: 0;
   }
 
@@ -524,7 +555,7 @@ figure img {
   }
 
   .btn {
-    max-width: 390px;
+    max-width: 500px;
   }
 }
 
