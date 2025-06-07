@@ -5,7 +5,7 @@
 }
 
 html {
-  background-image: url(/assets/images/borgmesterchristiansensgade.jpg);
+  background-image: url(../assets/images/borgmesterchristiansensgade.jpg);
 }
 
 body {
@@ -254,16 +254,16 @@ header input:checked ~ .sidebar {
 .divider,
 .divider_3 {
   background-color: var(--raisin);
-  height: 1px;
+  height: 2px;
   width: auto;
-  margin: 0 2rem;
+  margin: 2rem 2rem 1rem 2rem;
 }
 
 .divider_2 {
   background-color: var(--raisin);
-  height: 1px;
+  height: 2px;
   width: auto;
-  margin: 1rem 0 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .infotags {
@@ -297,7 +297,6 @@ header input:checked ~ .sidebar {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 1rem;
   background-color: transparent;
   font: var(--btn-font);
   color: var(--raisin);
@@ -349,10 +348,14 @@ header input:checked ~ .sidebar {
 figcaption {
   font: var(--infotag-font);
   color: var(--raisin);
+  margin: 0;
+  padding: 0;
 }
 
-.figure {
-  margin: 2rem 0;
+figure {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .linkedin-btn {
@@ -364,6 +367,60 @@ figcaption {
   margin: 1rem 0 1rem 0;
 }
 
+.container_theme {
+  margin: 1rem 2rem;
+}
+
+.container_theme p:not(:first-of-type) {
+  padding: 2rem 0 2rem 0;
+}
+
+.link-sub-desc {
+  padding-top: 0.5rem;
+}
+
+.theme-img {
+  filter: grayscale(1);
+  transition: filter 0.6s ease-in-out;
+}
+
+.theme-img:hover {
+  filter: grayscale(0);
+}
+
+figure img {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.kivilai_1 {
+  padding: 2rem 0;
+}
+
+#kivilai_3 {
+  padding-bottom: 2rem;
+}
+
+.add-space {
+  margin-top: 2rem;
+}
+
+.theme_4 .emergency_1 {
+  display: flex;
+  margin: auto;
+  animation: rotate 50s linear infinite;
+  padding: 2rem 0 1rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (min-width: 499px) {
   html {
     color: red;
@@ -371,6 +428,60 @@ figcaption {
   .hero {
     min-height: 450px;
   }
+
+  .container_theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .theme_4 .emergency_1 {
+    padding-top: 0;
+  }
+
+  /* Start: Tema 5-specifikke placeringer*/
+
+  .fig-span_5_1 {
+    display: flex;
+    justify-content: flex-end;
+    grid-row: span 2;
+  }
+
+  .theme_5 figure:nth-of-type(1),
+  .theme_4 figure:nth-of-type(2) {
+    grid-column: 1;
+  }
+
+  .fig-span_5_2 {
+    grid-column: 2;
+    grid-row: span 6;
+  }
+
+  .theme_5 p:nth-of-type(2),
+  .theme_4 p:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .theme_5 p:nth-of-type(4),
+  .theme_4 p:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .theme_5 img,
+  .theme_4 img {
+    margin-top: 0;
+  }
+  .kivilai_1 {
+    padding: 0;
+  }
+  /* Slut: Tema 5-specifikke placeringer*/
+
+  .add-space {
+    margin-top: 0;
+  }
+
   .container {
     flex-direction: row-reverse;
     gap: 2rem;
@@ -410,6 +521,10 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+
+  .btn {
+    max-width: 390px;
   }
 }
 
