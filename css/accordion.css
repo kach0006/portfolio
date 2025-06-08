@@ -18,7 +18,7 @@
 
 .accordion-item-header::after {
   content: "";
-  background-image: url(/assets/images/more-btn.webp);
+  background-image: url(../assets/images/more-btn.webp);
   background-size: contain;
   background-repeat: no-repeat;
   height: 1.5rem;
@@ -31,7 +31,7 @@
 
 .accordion-item-header.active::after {
   content: "";
-  background-image: url(/assets/images/less-btn.webp);
+  background-image: url(../assets/images/less-btn.webp);
   background-size: contain;
   background-repeat: no-repeat;
   height: 1.5rem;
@@ -70,6 +70,10 @@
 
 .accordion-cont {
   padding-top: 0;
+}
+
+.accordion-cont_2 {
+  padding-top: 1rem;
 }
 
 @media (min-width: 499px) {
