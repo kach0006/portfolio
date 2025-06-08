@@ -3,6 +3,6 @@ const upButton = document.querySelector(".up-btn");
 upButton.addEventListener("click", scrollUp);
 
 function scrollUp() {
-  console.log("Clicked " + this.className);
-  window.scrollTo({top: 0, behavior: "smooth"});
+  console.log("Clicked");
+  window.scrollTo({behavior: "smooth", top: 0});
 }
