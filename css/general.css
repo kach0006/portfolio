@@ -213,7 +213,7 @@ header input:checked ~ .sidebar {
   background-color: var(--raisin);
   height: 2px;
   width: auto;
-  margin: 2rem 2rem 1rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 .divider {

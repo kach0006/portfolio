@@ -68,6 +68,10 @@
   margin-bottom: 0.15rem;
 }
 
+.accordion-cont {
+  padding-top: 0;
+}
+
 @media (min-width: 499px) {
   .accordion {
     max-width: 400px;
