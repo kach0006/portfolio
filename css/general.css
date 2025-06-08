@@ -47,7 +47,7 @@ header {
 .header-top {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: flex-start;
   width: 100%;
 }
 
