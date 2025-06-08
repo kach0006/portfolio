@@ -316,6 +316,10 @@ figure {
   padding: 0;
 }
 
+figure img {
+  padding-bottom: 0.5rem;
+}
+
 .linkedin-btn {
   margin-top: 3rem;
 }
@@ -352,11 +356,15 @@ figure img {
 }
 
 .kivilai_1 {
-  padding: 2rem 0;
+  padding: 2rem 0 0.5rem;
 }
 
 #kivilai_3 {
   padding-bottom: 2rem;
+}
+
+.theme_5 figure:nth-of-type(1) {
+  padding-bottom: 1rem;
 }
 
 .add-space {
@@ -418,16 +426,18 @@ figure img {
   /* Start: Tema 5-specifikke placeringer*/
 
   .fig-span_5_1 {
-    display: flex;
-    justify-content: flex-end;
     grid-row: span 2;
   }
 
-  .theme_5 figure:nth-of-type(1),
+  .theme_5 figure:nth-of-type(2),
   .theme_4 figure:nth-of-type(2),
   .theme_3 figure:nth-of-type(2),
   .theme_2 figure:nth-of-type(2) {
     grid-column: 1;
+  }
+
+  .theme_5 figure:nth-of-type(1) {
+    padding-bottom: 0;
   }
 
   .fig-span_5_2 {
@@ -458,7 +468,7 @@ figure img {
     margin-top: 0;
   }
   .kivilai_1 {
-    padding: 0;
+    padding: 0 0 0.5rem;
   }
 
   #portrait_3 {
