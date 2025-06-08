@@ -144,7 +144,7 @@ header input:checked ~ .sidebar {
   min-height: 300px;
   width: 100%;
   max-width: 1100px;
-  background-image: url(/assets/images/koehlershave_dark.jpg);
+  background-image: url(../assets/images/koehlershave_dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -213,9 +213,12 @@ header input:checked ~ .sidebar {
   background-color: var(--raisin);
   height: 2px;
   width: auto;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 2rem 2rem 1rem 2rem;
 }
 
+.divider {
+  margin: 1rem 2rem 1rem 2rem;
+}
 .divider_2 {
   background-color: var(--raisin);
   height: 2px;
@@ -287,6 +290,7 @@ header input:checked ~ .sidebar {
 
 .to-top {
   justify-content: flex-end;
+  margin-top: 2rem;
 }
 
 .footer-logo {
