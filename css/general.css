@@ -98,12 +98,12 @@ input:checked + .toggle-label .menu-line {
 }
 
 .sidebar {
-  font: var(--h1-font);
+  font: var(--menu-font);
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: var(--turbo);
   transform: translateX(100%);
   transition: transform 0.3s ease;
@@ -204,7 +204,7 @@ header input:checked ~ .sidebar {
 }
 
 .statement {
-  font: var(--statement-font);
+  font: var(--h1-font);
   color: var(--raisin);
 }
 
@@ -213,7 +213,7 @@ header input:checked ~ .sidebar {
   background-color: var(--raisin);
   height: 2px;
   width: auto;
-  margin: 2rem 2rem 1rem 2rem;
+  margin: 1rem 2rem 1rem 2rem;
 }
 
 .divider_2 {
@@ -301,6 +301,10 @@ header input:checked ~ .sidebar {
 .copyright {
   justify-content: flex-start;
   padding-bottom: 2rem;
+}
+
+.copyright p {
+  font: var(--footer-font);
 }
 
 figcaption {
