@@ -5,7 +5,7 @@
 }
 
 html {
-  background-image: url(../assets/images/borgmesterchristiansensgade_2.jpg);
+  background-image: url(../assets/images/borgmesterchristiansensgade_2.webp);
 }
 
 body {
@@ -37,7 +37,7 @@ header {
   min-height: 300px;
   width: 100%;
   max-width: 1100px;
-  background-image: url(../assets/images/koehlershave_dark.jpg);
+  background-image: url(../assets/images/koehlershave_dark.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
