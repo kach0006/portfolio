@@ -152,29 +152,6 @@ header input:checked ~ .sidebar {
 
 /* Slut: Header inkl. sidebar */
 
-/* .hero {
-  position: relative;
-  min-height: 300px;
-  width: 100%;
-  max-width: 1100px;
-  background-image: url(../assets/images/koehlershave_dark.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
-
-/* header {
-  position: relative;
-  min-height: 300px;
-  width: 100%;
-  max-width: 1100px;
-  background-image: url(../assets/images/koehlershave_dark.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-}
- */
 .hero-btn {
   position: absolute;
   bottom: 2rem;
@@ -458,7 +435,6 @@ figure img {
   .slim-left {
     margin-left: 4rem;
   }
-  /* Start: Tema 5-specifikke placeringer*/
 
   .fig-span_5_1 {
     grid-row: span 2;
@@ -509,7 +485,6 @@ figure img {
   #portrait_3 {
     max-width: 500px;
   }
-  /* Slut: Tema 5-specifikke placeringer*/
 
   .add-space {
     margin-top: 0;
